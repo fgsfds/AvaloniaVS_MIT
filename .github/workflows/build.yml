@@ -23,6 +23,9 @@ jobs:
     - name: Restore NuGet packages
       run: nuget restore AvaloniaVS.sln
 
+    - name: Run Unit Tests 
+      run: dotnet test --configuration Release --no-restore
+
     - name: Build VSIX project
       run: msbuild AvaloniaVS.sln /p:Configuration=Release /p:DeployExtension=false
       
