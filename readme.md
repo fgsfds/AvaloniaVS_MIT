@@ -1,11 +1,9 @@
-> [!IMPORTANT]  
-> This branch contains an archive of the old version of the Avalonia Extension for Visual Studio.  
-> The code here is no longer supported or maintained. The repository remains as a public location for issues and discussions.  
-> A new and improved version of the extension is available as part of [Avalonia Accelerate](https://avaloniaui.net/accelerate)
+> This is a fork of [**AvaloniaVS**](https://github.com/AvaloniaUI/AvaloniaVS) repo with everything up until
+> it changed its license and became a commercial product.
+>
+> This code is distributed under the original **MIT** license that was in effect at the time of the split.
 
 ---
-
-[![2022 marketplace](https://img.shields.io/visual-studio-marketplace/v/AvaloniaTeam.AvaloniaVS.svg?label=2022-Marketplace)](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)
 # Avalonia for Visual Studio
 This repository is used to generate Avalonia Visual Studio extensions.
 Avalonia Visual Studio extension adds such capabilities to your Visual Studio:
@@ -14,15 +12,9 @@ Avalonia Visual Studio extension adds such capabilities to your Visual Studio:
 - It bundles Avalonia templates in your Visual Studio.
 - Icons for axaml files.
 
-### VSIX packages for Visual Studio
+### VSIX package for Visual Studio 2022/2026
 
-[Avalonia for Visual Studio 2022](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaVS)
-
-For VS2017 and VS2019 you need to download another plugin [Avalonia for Visual Studio 2019](https://marketplace.visualstudio.com/items?itemName=AvaloniaTeam.AvaloniaforVisualStudio)
-- Latest Release supporting VS2019 is **11.5**
-- Latest Release supporting VS2017 is **11.2**
-
-If you are interested in VSCode extension, visit https://github.com/AvaloniaUI/AvaloniaVSCode.
+Download latest release for [Releases](https://github.com/fgsfds/AvaloniaVS_MIT/releases) and run **.vsix** file.
 
 # Debugging
 If you want to debug Avalonia previewer extension the *easiest* way to do that is [VS Experimental instance](https://docs.microsoft.com/en-us/visualstudio/extensibility/the-experimental-instance?view=vs-2019).
