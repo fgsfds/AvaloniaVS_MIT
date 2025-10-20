@@ -5,10 +5,6 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <UseCodebase>true</UseCodebase>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Extension.vsext">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <None Include="overview.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -72,8 +65,8 @@
     </ItemGroup>
     <Error Text="No template files found." Condition="@(_TemplatePackage-&gt;Count()) == 0" />
     <Message Text="Template nuget packages found: @(_TemplatePackage)" Importance="low" />
-  <!-- don't modify the following, the pkgdef file uses the path below -->
-  <ItemGroup>
+    <!-- don't modify the following, the pkgdef file uses the path below -->
+    <ItemGroup>
       <VSIXSourceItem Include="@(_TemplatePackage)">
         <VSIXSubPath>ProjectTemplates\</VSIXSubPath>
       </VSIXSourceItem>

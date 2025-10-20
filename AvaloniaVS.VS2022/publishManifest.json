@@ -1,11 +1,11 @@
 {
-    "$schema": "http://json.schemastore.org/vsix-publish",
-    "categories": [ "build", "coding" ],
-    "identity": {
-        "internalName": "AvaloniaVS"
-    },
-    "overview": "overview.md",
-    "publisher": "AvaloniaTeam",
-    "qna": true,
-    "repo": "https://github.com/AvaloniaUI/AvaloniaVS"
+  "$schema": "http://json.schemastore.org/vsix-publish",
+  "categories": [ "build", "coding" ],
+  "identity": {
+    "internalName": "AvaloniaVS_MIT"
+  },
+  "overview": "overview.md",
+  "publisher": "AvaloniaTeam",
+  "qna": true,
+  "repo": "https://github.com/fgsfds/AvaloniaVS_MIT"
 }
