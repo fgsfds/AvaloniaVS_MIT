@@ -1,0 +1,33 @@
+name: Build and test
+
+on:
+  push:
+
+jobs:
+
+  build-and-test-windows:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Restore NuGet packages
+      run: nuget restore AvaloniaVS.sln
+
+    - name: Build VSIX project
+      run: msbuild AvaloniaVS.sln /p:Configuration=Release /p:DeployExtension=false
+      
+    - name: Upload VSIX Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: vsix
+        path: AvaloniaVS.VS2022/bin/Release/*.vsix
